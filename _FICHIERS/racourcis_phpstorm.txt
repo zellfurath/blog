@@ -1,0 +1,3 @@
+CTRL ALT L          Indentation automatique
+CTRL N              Recherche une classe
+CTRL MAJ N          Rercherche un fichier

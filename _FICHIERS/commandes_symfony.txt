@@ -1,0 +1,22 @@
+DEMARRER SERVEUR WEB        symfony serve
+ARRETER SERVEUR WEB         CTRL/C ds Terminal / symfony server:stop
+CREER UN CONTROLEUR         symfony console make:controller
+
+Base de données:
+Définir la BDD dans fichier .env
+CREER BDD                   symfony console doctrine:database:create
+SUPPRIMER BDD               symfony console doctrine:database:drop -f
+CREER/MODIF CLASSE ENTITY   symfony console make:entity
+APPLIQUER ENTITES VERS BDD  symfony console doctrine:schema:update -f
+SUPPRIMER TABLE CORR ENTITE symfony console doctrine:schema:drop -f
+CREATION ZONE ADMIN ENTITE  symfony console make:crud
+
+Utilisateurs:
+CREER UNE ENTITE USER       symfony console make:user
+CREER L'INSCRIPTION         symfony console make:registration-form
+CREER LE LOGIN              symfony console make:auth
+
+Formulaires:
+CREER UN FORM AP ENTITY     symfony console make:form
+
+composer require symfonycasts/verify-email-bundle

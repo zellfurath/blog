@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+    Publications
+{% endblock %}
+{% block body %}
+    <h2>Filtre</h2>
+    {{ form(monFormulaire) }}
+
+    <h2>Publications</h2>
+
+    {% for pub in lesPublications %}
+        -------------------------------<br>
+        <h4>{{ pub.titre }} - {{ pub.domaine.label }}</h4>
+        <br>
+        {{ pub.texte }}
+        <br>
+        -------------------------------<br>
+        <br>
+    {% endfor %}
+
+    <h2>Nouvelle publication</h2>
+    {{ form_start(formAjout) }}
+    <div class="row">
+        <div class="col-8">
+            {{ form_row(formAjout.titre) }}
+        </div>
+        <div class="col-4">
+            {{ form_row(formAjout.domaine) }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+            {{ form_row(formAjout.texte) }}
+        </div>
+    </div>
+
+    {{ form_end(formAjout) }}
+{% endblock %}
