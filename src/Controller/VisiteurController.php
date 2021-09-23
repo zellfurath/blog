@@ -60,11 +60,6 @@ class VisiteurController extends AbstractController
                 'lesPublications'=>$publications]);
     }
 
-    #[Route('/profils', name: 'profils')]
-    public function profils(){
-        return $this->render('visiteur/profils.html.twig');
-    }
-
     #[Route('/', name: 'home')]
     public function home(): Response
     {

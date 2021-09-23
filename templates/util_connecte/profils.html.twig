@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profils{% endblock %}
+
+{% block body %}
+
+    <table class="table">
+        <thead>
+        <th>ID</th>
+        <th>PSEUDO</th>
+        </thead>
+        <tbody>
+        {% for u in utils %}
+            <tr>
+                <td>{{ u.id }}</td>
+                <td>{{ u.email }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

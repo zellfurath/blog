@@ -18,5 +18,3 @@ CREER LE LOGIN              symfony console make:auth
 
 Formulaires:
 CREER UN FORM AP ENTITY     symfony console make:form
-
-composer require symfonycasts/verify-email-bundle
